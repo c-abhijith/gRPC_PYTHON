@@ -52,11 +52,16 @@ grpc-crud-app/
 ```bash
 git clone https://github.com/yourusername/grpc-crud-app.git
 cd grpc-crud-app
+```
 
+```bash
 
 pip install -r requirements.txt
 ./scripts/generate_proto.sh
 
+```
+
+```bash
 Terminal 1:
         python server/server.py
 Terminal 2:
@@ -69,9 +74,11 @@ Terminal 2:
             Update the item
             List all items
             Delete the item
+```
 
 Docker Support
 ---------------
+```bash
 
 To run the application in a Docker container, follow these steps:
 Build the Docker image:
@@ -86,10 +93,11 @@ bash
 docker run -p 50051:50051 grpc-crud-app
 This will start the gRPC server inside a Docker container, listening on port 50051.
 
-
+```
 
 File Details
 ------------
+```bash
 
 crud/crud.proto: The protocol buffer definition that defines the gRPC service and message formats.
 server/server.py: The gRPC server implementation, which handles CRUD operations.
@@ -97,14 +105,14 @@ client/client.py: The client-side implementation for testing CRUD operations.
 tests/test_grpc.py: Unit tests for the gRPC server.
 Dockerfile: A Docker configuration file to containerize the gRPC server.
 requirements.txt: Lists the Python dependencies.
-
+```
 
 License
 This project is licensed under the MIT License.
-
+```bash
 
 -----   No  ----------
-
+```
 ### Let me know if you'd like to add any more sections or details to the `README.md` file!
 
 
@@ -112,8 +120,9 @@ This project is licensed under the MIT License.
 
 
 
-
+```bash
 proto file creating 
 #!/bin/bash
 
 python -m grpc_tools.protoc -I=./crud --python_out=./crud --grpc_python_out=./crud crud/crud.proto
+```
