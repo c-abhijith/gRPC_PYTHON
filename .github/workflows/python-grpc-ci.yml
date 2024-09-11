@@ -29,12 +29,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install grpcio grpcio-tools protobuf pytest
 
-    # Step 4: Generate gRPC code from the .proto file
+    # Step 4: Generate gRPC files from the .proto file
     - name: Generate gRPC files
       run: |
         python -m grpc_tools.protoc -I=./crud --python_out=./crud --grpc_python_out=./crud crud/crud.proto
 
-    # Step 5: Run tests with pytest
+    # Step 5: Set PYTHONPATH to include the 'crud' directory
+    - name: Set up PYTHONPATH
+      run: echo "PYTHONPATH=./crud" >> $GITHUB_ENV
+
+    # Step 6: Run tests with pytest
     - name: Run tests
       run: |
         pytest tests/
