@@ -5,7 +5,7 @@
 This is a simple gRPC-based CRUD (Create, Read, Update, Delete) application built in Python. It demonstrates how to implement a gRPC service that performs CRUD operations on in-memory data. The application includes server and client implementations, and provides Docker support for easier deployment.
 
 ## Folder Structure
-
+**
 grpc-crud-app/
 │
 ├── crud/
@@ -33,7 +33,7 @@ grpc-crud-app/
 ├── Dockerfile                # Docker configuration for the project
 ├── requirements.txt          # Project dependencies
 └── README.md                 # Project documentation
-
+**
 
 
 
