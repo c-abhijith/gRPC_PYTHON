@@ -6,6 +6,7 @@ This is a simple gRPC-based CRUD (Create, Read, Update, Delete) application buil
 
 ## Folder Structure
 **
+```bash
 grpc-crud-app/
 │
 ├── crud/
@@ -34,7 +35,7 @@ grpc-crud-app/
 ├── requirements.txt          # Project dependencies
 └── README.md                 # Project documentation
 **
-
+```
 
 
 
