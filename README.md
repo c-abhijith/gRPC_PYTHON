@@ -110,3 +110,9 @@ This project is licensed under the MIT License.
 
 
 
+
+
+proto file creating 
+#!/bin/bash
+
+python -m grpc_tools.protoc -I=./crud --python_out=./crud --grpc_python_out=./crud crud/crud.proto

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package crud;
+
+// Importing google.protobuf.Empty to use it in RPC calls
+import "google/protobuf/empty.proto";
+
+message Item {
+    int32 id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message ItemId {
+    int32 id = 1;
+}
+
+message ItemList {
+    repeated Item items = 1;
+}
+
+service CrudService {
+    rpc CreateItem (Item) returns (Item);
+    rpc ReadItem (ItemId) returns (Item);
+    rpc UpdateItem (Item) returns (Item);
+    rpc DeleteItem (ItemId) returns (ItemId);
+    rpc ListItems (google.protobuf.Empty) returns (ItemList);
+}
